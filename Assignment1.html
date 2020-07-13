@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <h1>Assignment1 to write date in given format</h1>
+    </head>
+    <body>
+        <script>
+            var currentTime = new Date(),
+                day = currentTime.getDay();
+              hours = currentTime.getHours(),
+              minutes = currentTime.getMinutes();
+              seconds = currentTime.getSeconds();
+        
+            if (minutes < 10) {
+             minutes = "0" + minutes;
+          }
+        
+            var suffix = "AM";
+            if (hours >= 12) {
+            suffix = "PM";
+            hours = hours - 12;
+            }
+            if (hours == 0) {
+             hours = 12;
+            }
+            document.write("Current time is: ")
+            document.write(hours + " " + suffix + ":" + minutes + ":" + seconds)
+        </script>
+    </body> 
+      
+    </body>
+</html>
